@@ -175,6 +175,8 @@ You should see something like this:
 
 Woah! That's a lot of XML. But, if you take a closer look at the content, you'll see that these Nokogiri XML elements do describe the individual courses. You'll notice course titles and descriptions, among other pieces of information. 
 
+**Top-Tip:** You can scroll down and view more of a long document like this in Pry by using the down arrow key. To stop scrolling and free up the command line so that you are still in Pry but able to type in and execute lines of code, hit `q`. 
+
 Okay, now that we have a working line of code for grabbing all of the courses from the page, let's operate on those courses in order to find the title, schedule and description of each one.
 
 ### Finding CSS Selectors for The Desired Attributes 
