@@ -24,7 +24,7 @@ Scroll down until you are looking at the list of course offerings:
 
 ![](http://readme-pics.s3.amazonaws.com/Screen%20Shot%202015-08-20%20at%202.00.13%20PM.png)
 
-We cans see that each course has a title, a schedule (either Part- or Full-Time) and a description. This seems like a great place to start in terms of defining our own `Course` class objects. 
+We can see that each course has a title, a schedule (either Part- or Full-Time) and a description. This seems like a great place to start in terms of defining our own `Course` class objects. 
 
 Open up `lib/course.rb` and define your class: 
 
@@ -432,31 +432,3 @@ end
 
 Scraper.new.print_courses
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
