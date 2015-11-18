@@ -41,7 +41,7 @@ Looks like we have some methods to define. Let's start with the instance method 
 
 ```ruby
 class Course
-  att_accessor :title, :schedule, :description
+  attr_accessor :title, :schedule, :description
 end
 ```
 
