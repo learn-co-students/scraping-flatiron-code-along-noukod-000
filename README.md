@@ -91,7 +91,7 @@ The `.make_courses` method will be responsible for actually instantiating `Cours
 
 ##### `.print_courses`
 
-The `.print_courses` method we made for you! It calls on `.make_courses` and then iterates over all of the courses that get created to `puts` out a list of course offerings. We gave you this freebie so that we can easily see how cool it is to scrape data and make real live Ruby objects with it. 
+The `.print_courses` method we made for you! It calls on `.make_courses` and then iterates over all of the courses that gets created to `puts` out a list of course offerings. We gave you this freebie so that we can easily see how cool it is to scrape data and make real live Ruby objects with it. 
 
 Now that we have a basic concept of the methods we're expected to build, we're going to ignore them (surprise!). We've already discussed how tricky it is to scrape data from a web page. It is a very precise process and it takes *a lot* of playing around in Pry to find the right CSS selectors for the desired data. So, we're going to start by building our `.get_page` method. **As soon as we get the HTML document using Nokogiri, we will drop into our program using Pry and play around with CSS selectors until we find what we're looking for**. Once we have working code, we'll worry about organizing the appropriate code into the above-described methods. 
 
