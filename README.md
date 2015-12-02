@@ -432,3 +432,5 @@ end
 
 Scraper.new.print_courses
 ```
+
+<a href='https://learn.co/lessons/scraping-flatiron-code-along' data-visibility='hidden'>View this lesson on Learn.co</a>
