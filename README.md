@@ -115,7 +115,7 @@ class Scraper
 end
 ```
 
-Notice that we are already requiring Nokigiri, open-uri and Pry at the tope of the file. We are ready to use Nokogiri and open-uri to get our HTML. Add the following line to your `.get_page` method:
+Notice that we are already requiring Nokigiri, open-uri and Pry at the top of the file. We are ready to use Nokogiri and open-uri to get our HTML. Add the following line to your `.get_page` method:
 
 ```ruby
 doc = Nokogiri::HTML(open("http://learn-co-curriculum.github.io/site-for-scraping/courses"))
