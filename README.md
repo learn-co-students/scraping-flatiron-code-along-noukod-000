@@ -433,4 +433,4 @@ end
 Scraper.new.print_courses
 ```
 
-<a href='https://learn.co/lessons/scraping-flatiron-code-along' data-visibility='hidden'>View this lesson on Learn.co</a>
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/scraping-flatiron-code-along' title='Object Oriented Scraping'>Object Oriented Scraping</a> on Learn.co and start learning to code for free.</p>
