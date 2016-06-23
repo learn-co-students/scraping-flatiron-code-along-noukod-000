@@ -283,7 +283,7 @@ require_relative './course.rb'
 
 We are requiring our `Course` class file so that our `Scraper` can make new courses and give them attributes scraped from the web page.
 
-We know how to grab an array-like collection of course elements from the page with the ``doc.css(".post")` line. We also know what code will grab us the title, schedule and description of an individual member of that collection.
+We know how to grab an array-like collection of course elements from the page with the `doc.css(".post")` line. We also know what code will grab us the title, schedule and description of an individual member of that collection.
 
 So, we can iterate over the collection, make a new `Course` instance for each course offering element we are iterating over, and assign that instance the scraped title, schedule and description, using the working code for those attributes that we already figured out.
 
