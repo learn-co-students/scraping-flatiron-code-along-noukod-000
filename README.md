@@ -192,7 +192,7 @@ This describes *just one course offering*. If you look closely, you'll see it co
 
 #### Scraping Course Title
 
-Go back to the [site](http://learn-co-curriculum.github.io/site-for-scraping/courses) and open up the element inspector again. Use the magnifying class symbol to hover over the title of the first course offering. You should see a tag appear when you hover over the course title with this tool. The tag should say `h2 750.428 x 28px`.
+Go back to the [site](http://learn-co-curriculum.github.io/site-for-scraping/courses) and open up the element inspector again. Click the symbol in the upper left of your console (it looks like an arrow cursor pointing into a box) to hover over the title of the first course offering. You should see a tag appear when you hover over the course title with this tool. The tag should say `h2 750.428 x 28px`.
 
 We don't care about the height and width but we *do* care about the selector, `h2`.
 
