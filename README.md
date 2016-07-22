@@ -152,7 +152,7 @@ If you scroll down in your terminal, you should see more and more of the HTML do
 
 Okay, we're ready to find the CSS selector that will grab the course offering from the HTML document. How should we go about doing this? Should we guess? Should we manually read the entire HTML document, looking for the HTML elements that contain the course offerings? Nope. We're going to revisit the Flatiron website in the browser and use the developer tools of our browser to inspect the elements.
 
-Click on this link and once again scroll down to the section of the page that lists the course offerings. Right click on any course offering and select "inspect element". You should see something like this in your browser:
+Click on [this link](http://learn-co-curriculum.github.io/site-for-scraping/courses) and once again scroll down to the section of the page that lists the course offerings. Right click on any course offering and select "inspect element". You should see something like this in your browser:
 
 ![](http://readme-pics.s3.amazonaws.com/Screen%20Shot%202015-08-20%20at%204.38.49%20PM.png)
 
@@ -161,7 +161,7 @@ Let's take a closer look at the highlighted line in the element inspector:
 ```html
 <article class="post same-height-left" style="height: 489px;">
 ```
-Looks like element that contains an individual course has a class of "post". Let's use this CSS selector of `.post` to try to grab *all* courses.
+Looks like the element that contains an individual course has a class of "post". Let's use this CSS selector of `.post` to try to grab *all* courses.
 
 Go back to your terminal and execute the following line:
 
@@ -173,7 +173,7 @@ You should see something like this:
 
 ![](http://readme-pics.s3.amazonaws.com/Screen%20Shot%202015-08-20%20at%204.44.13%20PM.png)
 
-Woah! That's a lot of XML. But, if you take a closer look at the content, you'll see that these Nokogiri XML elements do describe the individual courses. You'll notice course titles and descriptions, among other pieces of information.
+Whoa! That's a lot of XML. But, if you take a closer look at the content, you'll see that these Nokogiri XML elements do describe the individual courses. You'll notice course titles and descriptions, among other pieces of information.
 
 **Top-Tip:** You can scroll down and view more of a long document like this in Pry by using the down arrow key. To stop scrolling and free up the command line so that you are still in Pry but able to type in and execute lines of code, hit `q`.
 
@@ -371,13 +371,13 @@ The `#make_courses` method should operate on the collection of course offering N
 
 ```ruby
 def make_courses
-  self. get_courses.each do |post|
-     course = Course.new
-     course.title = post.css("h2").text
-     course.schedule = post.css(".date").text
-     course.description = post.css("p").text
+  self.get_courses.each do |post|
+    course = Course.new
+    course.title = post.css("h2").text
+    course.schedule = post.css(".date").text
+    course.description = post.css("p").text
   end
-  end
+end
 ```
 
 Run the test suite again and all of your tests should be passing!
@@ -434,5 +434,3 @@ Scraper.new.print_courses
 ```
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/scraping-flatiron-code-along' title='Object Oriented Scraping'>Object Oriented Scraping</a> on Learn.co and start learning to code for free.</p>
-
-<p class='util--hide'>View <a href='https://learn.co/lessons/scraping-flatiron-code-along'>Scraping Lab</a> on Learn.co and start learning to code for free.</p>
