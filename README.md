@@ -146,6 +146,8 @@ Scraper.new.get_page
 
 Once your file looks like the code above, run the file with `ruby lib/scraper.rb` in your terminal. Once you hit your binding, type the `doc` variable into the terminal and you should see the HTML document, retrieved for us by Nokogiri and open-uri. You should see something like this:
 
+>Note: When you hit the pry, you may end up with a prompt that looks like this `:`. That just means there's a lot of test and you can scroll up and down using the arrow keys. If you need to escape this prompt so you can type in `doc`, then you simply have to press `q` or the `esc` key. 
+
 ![](http://readme-pics.s3.amazonaws.com/Screen%20Shot%202015-08-20%20at%204.25.06%20PM.png)
 
 If you scroll down in your terminal, you should see more and more of the HTML document.
@@ -434,3 +436,5 @@ Scraper.new.print_courses
 ```
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/scraping-flatiron-code-along' title='Object Oriented Scraping'>Object Oriented Scraping</a> on Learn.co and start learning to code for free.</p>
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/scraping-flatiron-code-along'>Scraping Lab</a> on Learn.co and start learning to code for free.</p>
