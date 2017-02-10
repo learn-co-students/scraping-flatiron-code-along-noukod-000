@@ -79,7 +79,7 @@ Start by running the `Scraper` specs with the `rspec spec/scraper_spec.rb` line 
 
 ##### `#get_page`
 
-The `.get_page` instance method will be responsible for using Nokogiri and `open-uri` to grab the entire HTML document from the web page.
+The `#get_page` instance method will be responsible for using Nokogiri and `open-uri` to grab the entire HTML document from the web page.
 
 ##### `#get_courses`
 
