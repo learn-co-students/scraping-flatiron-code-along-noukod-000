@@ -226,7 +226,7 @@ We did it! We found the code for grabbing an individual course's title. Let's do
 
 #### Scraping Course Schedule
 
-Go back to the [site](http://learn-co-curriculum.github.io/site-for-scraping/courses) and open up the element inspector again. Use the magnifying class symbol to hover over the schedule of of the first course offering. You should see a tag appear when you hover over the schedule (the line that reads "Part-Time" or "Full-Time") that reads `em.date ...`
+Go back to the [site](http://learn-co-curriculum.github.io/site-for-scraping/courses) and open up the element inspector again. Use the magnifying class symbol to hover over the schedule of the first course offering. You should see a tag appear when you hover over the schedule (the line that reads "Part-Time" or "Full-Time") that reads `em.date ...`
 
 It looks like the schedule element has a class of "date". Let's use that CSS selector to grab the date of the first course.
 
