@@ -313,7 +313,7 @@ class Scraper
   end
 ```
 
-For each iteration over the collection of Nokogiri XML elements returned to use by the `doc.css(".post")` line, we are making a new instance of the `Course` class and giving that instance the `title`, `schedule` and `description` extracted from the XML.
+For each iteration over the collection of Nokogiri XML elements returned to us by the `doc.css(".post")` line, we are making a new instance of the `Course` class and giving that instance the `title`, `schedule` and `description` extracted from the XML.
 
 Place a `binding.pry` at the end of the method. Now, run the code in this file with `ruby lib/scraper.rb`. When you hit the binding, enter `Course.all` into your terminal and take a look at all the courses we made:
 
