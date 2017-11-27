@@ -79,7 +79,7 @@ Start by running the `Scraper` specs with the `rspec spec/scraper_spec.rb` line 
 
 ##### `#get_page`
 
-The `.get_page` instance method will be responsible for using Nokogiri and `open-uri` to grab the entire HTML document from the web page.
+The `#get_page` instance method will be responsible for using Nokogiri and `open-uri` to grab the entire HTML document from the web page.
 
 ##### `#get_courses`
 
@@ -146,13 +146,15 @@ Scraper.new.get_page
 
 Once your file looks like the code above, run the file with `ruby lib/scraper.rb` in your terminal. Once you hit your binding, type the `doc` variable into the terminal and you should see the HTML document, retrieved for us by Nokogiri and open-uri. You should see something like this:
 
+>Note: When you hit the pry, you may end up with a prompt that looks like this `:`. That just means there's a lot of text and you can scroll up and down using the arrow keys. If you need to escape this prompt so you can type in `doc`, then you simply have to press `q` or the `esc` key. 
+
 ![](http://readme-pics.s3.amazonaws.com/Screen%20Shot%202015-08-20%20at%204.25.06%20PM.png)
 
 If you scroll down in your terminal, you should see more and more of the HTML document.
 
 Okay, we're ready to find the CSS selector that will grab the course offering from the HTML document. How should we go about doing this? Should we guess? Should we manually read the entire HTML document, looking for the HTML elements that contain the course offerings? Nope. We're going to revisit the Flatiron website in the browser and use the developer tools of our browser to inspect the elements.
 
-Click on this link and once again scroll down to the section of the page that lists the course offerings. Right click on any course offering and select "inspect element". You should see something like this in your browser:
+Click on [this link](http://learn-co-curriculum.github.io/site-for-scraping/courses) and once again scroll down to the section of the page that lists the course offerings. Right click on any course offering and select "inspect element". You should see something like this in your browser:
 
 ![](http://readme-pics.s3.amazonaws.com/Screen%20Shot%202015-08-20%20at%204.38.49%20PM.png)
 
@@ -161,7 +163,7 @@ Let's take a closer look at the highlighted line in the element inspector:
 ```html
 <article class="post same-height-left" style="height: 489px;">
 ```
-Looks like element that contains an individual course has a class of "post". Let's use this CSS selector of `.post` to try to grab *all* courses.
+Looks like the element that contains an individual course has a class of "post". Let's use this CSS selector of `.post` to try to grab *all* courses.
 
 Go back to your terminal and execute the following line:
 
@@ -173,7 +175,7 @@ You should see something like this:
 
 ![](http://readme-pics.s3.amazonaws.com/Screen%20Shot%202015-08-20%20at%204.44.13%20PM.png)
 
-Woah! That's a lot of XML. But, if you take a closer look at the content, you'll see that these Nokogiri XML elements do describe the individual courses. You'll notice course titles and descriptions, among other pieces of information.
+Whoa! That's a lot of XML. But, if you take a closer look at the content, you'll see that these Nokogiri XML elements do describe the individual courses. You'll notice course titles and descriptions, among other pieces of information.
 
 **Top-Tip:** You can scroll down and view more of a long document like this in Pry by using the down arrow key. To stop scrolling and free up the command line so that you are still in Pry but able to type in and execute lines of code, hit `q`.
 
@@ -192,7 +194,7 @@ This describes *just one course offering*. If you look closely, you'll see it co
 
 #### Scraping Course Title
 
-Go back to the [site](http://learn-co-curriculum.github.io/site-for-scraping/courses) and open up the element inspector again. Use the magnifying class symbol to hover over the title of the first course offering. You should see a tag appear when you hover over the course title with this tool. The tag should say `h2 750.428 x 28px`.
+Go back to the [site](http://learn-co-curriculum.github.io/site-for-scraping/courses) and open up the element inspector again. Click the symbol in the upper left of your console (it looks like an arrow cursor pointing into a box) to hover over the title of the first course offering. You should see a tag appear when you hover over the course title with this tool. The tag should say `h2 750.428 x 28px`.
 
 We don't care about the height and width but we *do* care about the selector, `h2`.
 
@@ -224,7 +226,7 @@ We did it! We found the code for grabbing an individual course's title. Let's do
 
 #### Scraping Course Schedule
 
-Go back to the [site](http://learn-co-curriculum.github.io/site-for-scraping/courses) and open up the element inspector again. Use the magnifying class symbol to hover over the schedule of of the first course offering. You should see a tag appear when you hover over the schedule (the line that reads "Part-Time" or "Full-Time") that reads `em.date ...`
+Go back to the [site](http://learn-co-curriculum.github.io/site-for-scraping/courses) and open up the element inspector again. Use the magnifying glass symbol to hover over the schedule of the first course offering. You should see a tag appear when you hover over the schedule (the line that reads "Part-Time" or "Full-Time") that reads `em.date ...`
 
 It looks like the schedule element has a class of "date". Let's use that CSS selector to grab the date of the first course.
 
@@ -371,13 +373,13 @@ The `#make_courses` method should operate on the collection of course offering N
 
 ```ruby
 def make_courses
-  self. get_courses.each do |post|
-     course = Course.new
-     course.title = post.css("h2").text
-     course.schedule = post.css(".date").text
-     course.description = post.css("p").text
+  self.get_courses.each do |post|
+    course = Course.new
+    course.title = post.css("h2").text
+    course.schedule = post.css(".date").text
+    course.description = post.css("p").text
   end
-  end
+end
 ```
 
 Run the test suite again and all of your tests should be passing!
