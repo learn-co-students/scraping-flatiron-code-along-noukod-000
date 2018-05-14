@@ -31,7 +31,7 @@ describe "Course" do
 
   context "class methods" do 
     describe ".all" do 
-      it "returns and array of all the instances of the Course class" do
+      it "returns an array of all the instances of the Course class" do
         Course.reset_all
         course_one = Course.new
         course_two = Course.new
